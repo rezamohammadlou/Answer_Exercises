@@ -31,12 +31,12 @@ def remove_loan_amount_outliers(loan_data,min_L,max_L):
     loan_data=df[(df['loan_amount']>=min_L) & (df['loan_amount']<=max_L)]
     return loan_data
 
-#تغییر فرمت داده ها
-def change_data_types(loan_data):
-    loan_data.rate=round(loan_data.rate)
-    loan_data['loan_start']=pd.to_datetime(loan_data['loan_start'])
-    loan_data['loan_end']=pd.to_datetime(loan_data['loan_end'])
-    return loan_data
+# #تغییر فرمت داده ها
+# def change_data_types(loan_data):
+#     loan_data.rate=round(loan_data.rate)
+#     loan_data['loan_start']=pd.to_datetime(loan_data['loan_start'])
+#     loan_data['loan_end']=pd.to_datetime(loan_data['loan_end'])
+#     return loan_data
 
 #One hot encoder
 def one_hot_encoder(loan_data,columns):
